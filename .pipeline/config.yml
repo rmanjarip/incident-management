@@ -1,18 +1,19 @@
 general:
   productiveBranch: "main"
+  buildTool: "mta"
 
 stages:
-  Build:
+  build:
     npmExecuteLint: false
 
-  Additional Unit Tests:
+  additionalUnitTests:
     npmExecuteScripts: false
     karmaExecuteTests: false
 
-  Acceptance:
+  acceptance:
     cloudFoundryDeploy: false
 
-  Release:
+  release:
     cloudFoundryDeploy: true
     cfApiEndpoint: "https://api.cf.us10-001.hana.ondemand.com"
     cfOrg: "bddd1fcetrial"
